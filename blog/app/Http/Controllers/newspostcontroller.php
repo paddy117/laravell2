@@ -62,6 +62,6 @@ class newspostcontroller extends Controller
 
     public function show()
     {
-      return view(newspostcontroller::ITEMS[1]);
+//      return view(newspostcontroller::ITEMS[1]);
     }
 }

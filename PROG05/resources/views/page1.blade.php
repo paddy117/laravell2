@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Page1
                 </div>
 
                 <div class="links">
@@ -92,8 +92,13 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="{{route('page1')}}">Page1</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                <p>{{ $post->title }}</p>
+                <p>{{ $post->description }}</p>
+                <img src="{{ $post->image}}">
+
             </div>
         </div>
     </body>

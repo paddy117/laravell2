@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/page1','Page1controller@show')->name('page1');
+
+Route::get('/page1/{post}', 'Page1_1controller@show');
