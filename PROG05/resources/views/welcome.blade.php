@@ -91,7 +91,7 @@
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
+                    <a href="{{route('createpost')}}">create post</a>
                     <a href="{{route('page1')}}">Page1</a>
                 </div>
             </div>

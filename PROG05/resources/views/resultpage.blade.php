@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@csrf
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -126,34 +125,16 @@
 {{--                            <button type="submit">search</button>--}}
 {{--                        </form>--}}
 {{--                    </div>--}}
-                    <form action="{{route('resultpage')}}">
-
-                    <div class="form group">
-                        <label for="search"></label>
-                        <input id="search" type="text" placeholder="Search.."  name="search" >
-                        <button>search</button>
-
-                    </div>
-                    </form>
-                    <form action="{{route('resultpage')}}">
-
-                        <div class="form group">
-                            <div class="form group">
-                                <label for="category_id"></label>
-                                <select id="catergory_id" name="category_id">
-                                    <option value="1">Eerste wereldoorlog</option>
-                                    <option value="2">Tweede wereld oorlog</option>
-                                    <option value="3">Koude oorlog</option>
-                                    <option value="4">modern</option>
-                                </select>
-                                {{--        <input type="submit" >--}}
-                            </div>
-                            <button>search</button>
-                        </div>
-                    </form>
+{{--                    <form method = "post">--}}
+{{--                        @csrf--}}
+{{--                    <div class="form group">--}}
+{{--                        <label for="search"></label>--}}
+{{--                        <input id="search" type="text" placeholder="Search.."  name="search" >--}}
+{{--                        <button>search</button>--}}
+{{--                    </div>--}}
+{{--                    </form>--}}
                     @auth
-                        <a href="{{ url('/home') }}">account</a>
-                        <a href="{{route('createpost')}}">create post</a>
+                        <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -176,7 +157,7 @@
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
-
+                    <a href="{{route('createpost')}}">create post</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
 

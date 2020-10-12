@@ -13,10 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Page1controller@show')->name('page1');
 
 Route::get('/page1','Page1controller@show')->name('page1');
 
-Route::get('/page1/{post}', 'Page1_1controller@show');
+Route::get('/post/{post}', 'Page1_1controller@show');
+
+
+//Route::get('/page1', 'SearchController@search');
+//Route::get('/page1', 'SearchController@search');
+
+Route::get('/resultpage', 'resultController@show')->name('resultpage');
+Route::get('/resultpage', 'SearchController@search')->name('resultpage');
+
+Route::post('/CreatePost', 'CreatePostPagecontroller@store');
+Route::get('/CreatePost', 'CreatePostPagecontroller@show')->name('createpost');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
