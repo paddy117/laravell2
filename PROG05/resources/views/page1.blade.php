@@ -21,29 +21,12 @@
                 justify-content: center;
             }
 
-            .flex-container > div {
-                /*background-color: #f1f1f1;*/
-                /*width: 100px;*/
-                /*margin: 10px;*/
-                /*text-align: center;*/
-                /*line-height: 75px;*/
-                /*font-size: 30px;*/
-            }
 
             div.gallery {
                 display: block;
                 margin: 10px;
-                /*padding: 20px;*/
                 border: 1px solid #ccc;
-                /*float: left;*/
                 width: 300px;
-
-                /*width: 300px;*/
-                /*padding: 20px;*/
-                /*float: left;*/
-
-
-
             }
 
             div.gallery:hover {
@@ -77,7 +60,6 @@
 
             .flex-center {
                 align-items: center;
-                /*display: flex;*/
                 justify-content: center;
             }
 
@@ -120,12 +102,6 @@
 
             @if (Route::has('login'))
                 <div class="top-right links">
-{{--                    <div>--}}
-{{--                        <form action= >--}}
-{{--                            <input type="text" placeholder="Search.." name="search">--}}
-{{--                            <button type="submit">search</button>--}}
-{{--                        </form>--}}
-{{--                    </div>--}}
                     <form action="{{route('resultpage')}}">
 
                     <div class="form group">
@@ -146,7 +122,6 @@
                                     <option value="3">Koude oorlog</option>
                                     <option value="4">modern</option>
                                 </select>
-                                {{--        <input type="submit" >--}}
                             </div>
                             <button>search</button>
                         </div>
@@ -197,13 +172,6 @@
                 @endforeach
                     </tr>
                 </div>
-
-
-
-
-
-
-
             </div>
         </div>
     </body>
